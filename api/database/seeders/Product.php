@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use Fakerino\Fakerino;
 
 class Product extends Seeder
 {
@@ -13,8 +12,6 @@ class Product extends Seeder
      */
     public function run(): void
     {
-        $fakerino = Fakerino::create();
-
         DB::table('products')->insert([
             'created_at' => date('Y-m-d H:i:s'),
             'name' => 'Celular 1',
